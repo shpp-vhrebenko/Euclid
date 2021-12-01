@@ -49,6 +49,7 @@
   --white: #fff;
   --black: #333;
   --orange: #FF9900; 
+  --lite-orange: rgba(255, 153, 0, 0.7);
   --grey: #666;
   --lite-grey: #CACACA; 
   --dark-grey: #413f3f; 
@@ -118,7 +119,7 @@ img {
   background-color: var(--orange);
   color: var(--white);
   border: 1px solid var(--orange); 
-  transition: transform .1s ease;
+  transition: background-color .1s ease;
 }
 
 .btn-transparent {  
@@ -135,9 +136,33 @@ img {
 
 .btn:hover,
 .btn-transparent:hover,
-.btn-white:hover {
-  transform: translateY(2px);
+.btn-white:hover {  
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color:  var(--lite-orange);
+}
+
+.btn-transparent:hover {
+  background-color: var(--orange);
+}
+
+.btn-white:hover {
+  background-color: var(--grey);
+  color: var(--white);
+  border-color: var(--grey);
+}
+
+.visual-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
@@ -157,6 +182,7 @@ body {
   width: 100%;
   padding: 14px 75px;
   background: var(--white);
+  z-index: 1;
 }
 
 .header__logo:focus {
@@ -360,10 +386,6 @@ body {
 
 /* HOW WORK */
 
-.how-work {
-  
-}
-
 .how-work__nav {
   display: inline-block;
   margin-bottom: 45px;
@@ -445,24 +467,325 @@ body {
 
 /* FAQ */
 
+.FAQ__header {
+  margin-bottom: 32px;
+}
+
+.FAQ-list {
+  list-style: none;  
+}
+
+.FAQ-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+  border-top: 1px solid var(--lite-grey);
+  border-bottom: 1px solid var(--lite-grey);
+}
+
+.FAQ-list__item:hover {
+  cursor: pointer; 
+  border-top: 1px solid var(--orange);
+  border-bottom: 1px solid var(--orange);
+}
+
+.FAQ-list__item:hover > .FAQ-list__question {
+  color: var(--orange);
+}
+
+.FAQ-list__item:hover > .FAQ-list__button {
+  background: var(--orange);
+}
+
+.FAQ-list__item:hover > .FAQ-list__button::after {
+  background: var(--white);
+}
 
 
+.FAQ-list__item:hover > .FAQ-list__button::before {
+  background: var(--white);
+}
+
+.FAQ-list__question {
+  font-size: 24px;  
+  font-weight: 700;
+  line-height: 32px;  
+  text-align: left;
+  color: var(--black);
+}
+
+.FAQ-list__button {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border:none;
+  border-radius: 50px;
+  background: var(--lite-grey);
+}
+
+.FAQ-list__button:hover,
+.FAQ-list__button:focus {
+  cursor: pointer;
+  background: var(--orange);
+  outline: none;
+}
+
+.FAQ-list__button:hover::after,
+.FAQ-list__button:focus::after,
+.FAQ-list__button:focus-visible::after {
+  background: var(--white);
+
+} 
+
+.FAQ-list__button:hover::before,
+.FAQ-list__button:focus::before,
+.FAQ-list__button:focus-visible::before {
+  background: var(--white);
+} 
+
+.FAQ-list__button::after,
+.FAQ-list__button::before {  
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  width: 31px;
+  height: 1px;
+  background: var(--grey);
+}
+
+.FAQ-list__button::before { 
+  transform: rotate(90deg);
+}
 
 /* FOOTER */
+
 .footer {
-  
+  margin-bottom: 10px;
 }
 
 .footer__container {
-  min-height: 1920px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 594px;
   padding: 50px 75px;
   background-color: #222222;
 }
 
-.footer__left {
-  margin-right: 100px;
-  flex: 1 1 40%; 
+.footer__item {  
+  flex: 1 1 calc(100%/3); 
 }
 
+.footer__item-nav {
+  max-width: 250px;
+}
 
+.footer__item-form {
+  max-width: 570px;
+}
+
+.footer__item-desc {
+  max-width: 360px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer__logo:hover,
+.footer__logo:focus,
+.footer__logo:focus-visible {
+  outline:1px solid var(--orange);
+}
+
+.footer-nav {
+  list-style: none;
+  margin-bottom: 90px;
+} 
+
+.footer-nav__link { 
+  font-size: 18px;  
+  font-weight: 600;
+  line-height: 36px;  
+  text-align: left;
+  color: var(--white);
+}
+
+.footer-nav__link:focus,
+.footer-nav__link:hover,
+.footer-nav__link:focus-visible {
+  color: var(--orange);
+  outline: none;
+} 
+
+.iconbar {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+
+.iconbar__item {
+  width: 60px;
+  height: 60px;
+}
+
+.iconbar__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.iconbar__link {
+  width: inherit;
+  height: inherit;
+  display: inline-block;
+}
+
+.iconbar__link:hover,
+.iconbar__link:focus,
+.iconbar__link:focus-visible {
+  outline: none;  
+} 
+
+.iconbar__link:hover > svg.iconbar__icon ,
+.iconbar__link:focus > svg.iconbar__icon,
+.iconbar__link:focus-visible > svg.iconbar__icon {
+  fill: var(--orange);
+} 
+
+svg.iconbar__icon { 
+  width: inherit;
+  height: inherit;
+  fill: #7C7C7C;
+}
+
+svg.iconbar__icon:hover {
+  fill: var(--orange);
+}
+
+.footer__header-form {  
+  font-size: 48px;  
+  font-weight: 400;
+  line-height: 59px;  
+  text-align: left;
+  color: var(--lite-grey);
+}
+
+.footer__form {
+  margin-top: 25px;
+}
+
+.footer__description {  
+  font-size: 16px; 
+  font-weight: 400;
+  line-height: 32px;  
+  text-align: left;
+  color: var(--grey);
+}
+
+.application-form__input,
+.application-form__textarea {
+  width: 100%;
+  padding: 14px 24px;  
+  font-size: 16px;  
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  background: #414141;
+  border: none;
+  resize: none;
+}
+
+.application-form__textarea {
+  margin-bottom: 32px;
+}
+
+.application-form__input:focus,
+.application-form__textarea:focus,
+.application-form__input:focus-visible,
+.application-form__textarea:focus-visible {
+  background: var(--grey);
+  outline: none;
+  color: var(--white);
+}
+
+.application-form__input:focus::placeholder,
+.application-form__textarea:focus::placeholder,
+.application-form__input:focus-visible::placeholder,
+.application-form__textarea:focus-visible::placeholder {
+  color: var(--white);
+}
+
+.application-form__btn-box {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.application-form__help {  
+  font-size: 16px;  
+  font-weight: 400;
+  line-height: 32px;  
+  text-align: left;
+  color: var(--lite-grey);
+}
+
+.application-form__checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.application-form__checkbox:hover,
+.application-form__checkbox:focus,
+.application-form__checkbox:focus-visible {
+  color: var(--orange);
+  outline: none;
+}
+
+.application-form__checkbox input[type="checkbox"]:focus-visible + .checkbox-indicator {
+  border-color: var(--orange); 
+}
+
+.application-form__checkbox > input:focus-visible ~ .label,
+.application-form__checkbox > input:focus ~ .label {
+  color: var(--orange);
+}
+
+.application-form__checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--lite-grey);
+}
+
+.application-form__checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.application-form__checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 6px;
+  height: 1px;
+  background-color: var(--lite-grey);
+}
+
+.application-form__checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  left: 1px;
+  transform: rotate(45deg);
+}
+
+.application-form__checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+.application-form__btn {  
+  font-size: 16px; 
+  font-weight: 700;
+  line-height: 20px; 
+}
 

@@ -92,46 +92,63 @@
         <div class="FAQ__container container">
           <h2 class="FAQ__header section-header">Часто задаваемые вопросы</h2> 
           <nav class="FAQ__list FAQ-list">
-            <li class="FAQ-list__item">Из чего формируется конечная стоимость проекта?</li>
-            <li class="FAQ-list__item">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</li>
-            <li class="FAQ-list__item">Я выбираю между разными компаниями. В чём ваше отличие?</li>
-            <li class="FAQ-list__item">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? </li>
-            <li class="FAQ-list__item">Могу ли я вернуть деньги на каком-либо из этапов работ?</li>
+            <li class="FAQ-list__item"><p class="FAQ-list__question">Из чего формируется конечная стоимость проекта?</p><button class="FAQ-list__button" aria-label="Из чего формируется конечная стоимость проекта?"></button></li>
+            <li class="FAQ-list__item"><p class="FAQ-list__question">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p><button class="FAQ-list__button" aria-label="У меня есть свой проект. Сможем ли мы его доработать / реализовать?"></button></li>
+            <li class="FAQ-list__item"><p class="FAQ-list__question">Я выбираю между разными компаниями. В чём ваше отличие?</p><button class="FAQ-list__button" aria-label="Я выбираю между разными компаниями. В чём ваше отличие?"></button></li>
+            <li class="FAQ-list__item"><p class="FAQ-list__question">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? </p><button class="FAQ-list__button" aria-label="Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?"></button></li>
+            <li class="FAQ-list__item"><p class="FAQ-list__question">Могу ли я вернуть деньги на каком-либо из этапов работ?</p><button class="FAQ-list__button" aria-label="Могу ли я вернуть деньги на каком-либо из этапов работ?"></button></li>
           </nav>         
         </div>
       </section> 
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__item">
-          <a href="#"><img src="./img/Logo.svg" alt=""></a>
-        </div>
-        <nav class="footer__nav footer-nav">
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">О нас</a></li>
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">Проекты</a></li>
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">Отзывы</a></li>
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">Договор оферты</a></li>
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">Договор подряда</a></li>
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">Конфиденциальность</a></li>
-          <li class="footer-nav__item"><a href="" class="footer-nav__link">Партнёрское соглашение</a></li>
-        </nav> 
-        <nav class="footer__iconbar iconbar">
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li> 
-        </nav>
-        <div class="footer__item">
-          <form action="">
-            <p><label for=""></label><input type="text"></p>
-            <p><label for=""></label><input type="text"></p>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <button type="submit" class="btn">Отправить данные</button>
+        <div class="footer__item footer__item-nav">
+          <a href="#" class="footer__logo"><img src="./img/Logo_white.svg" alt=""></a>
+          <nav class="footer__nav footer-nav">
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">О нас</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Проекты</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Отзывы</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Договор оферты</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Договор подряда</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Конфиденциальность</a></li>
+            <li class="footer-nav__item"><a href="" class="footer-nav__link">Партнёрское соглашение</a></li>
+          </nav> 
+          <nav class="footer__iconbar iconbar">
+            <li class="iconbar__item"><a href="#" class="iconbar__link" aria-label="facebook"><svg class="iconbar__icon" ><use xlink:href="./img/footer_icons.svg#fb"></use></svg> </a></li>
+            <li class="iconbar__item"><a href="#" class="iconbar__link" aria-label="vk"><svg class="iconbar__icon"><use xlink:href="./img/footer_icons.svg#vk"></use></svg> </a></li>
+            <li class="iconbar__item"><a href="#" class="iconbar__link" aria-label="instagram"><svg class="iconbar__icon"><use xlink:href="./img/footer_icons.svg#instagram"></use></svg> </a></li> 
+          </nav>
+        </div>      
+        <div class="footer__item footer__item-form">
+          <h2 class="footer__header-form">Оставить заявку</h2>
+          <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form application-form">
+            <p>
+              <label for="user-name" class="visual-hidden">Фамилия, имя, отчество</label>
+              <input class="application-form__input" id="user-name" type="text" placeholder="Фамилия, имя и отчество*" name="user-name">
+            </p>
+            <p>
+              <label for="Електронный адрес" class="visual-hidden"></label>
+              <input class="application-form__input" type="text" name="user-email" id="user-email" placeholder="E-mail*">
+            </p>
+            <label for="user-message"></label>
+            <textarea class="application-form__textarea" id="user-message" cols="30" rows="10" placeholder="Сообщение" name="user-message"></textarea>
+            <div class="application-form__btn-box">
+              <button type="submit" class="btn application-form__btn">Отправить  данные</button>
+              <p class="application-form__help">
+                <label for="remember-me" class="application-form__checkbox">
+                  <input id="remember-me" type="checkbox" name="remember" class="visual-hidden" checked>
+                  <span class="checkbox-indicator"></span>
+                  <span class="label">Согласен на обработку данных</span>
+                </label>
+              </p>
+            </div>            
           </form>
         </div>
-        <div class="footer__item"></div>
-          <p>Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. </p>
-        
-      </div>
-    </footer>
+        <div class="footer__item footer__item-desc">
+          <p class="footer__description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. </p>        
+        </div>
+      </div>  
+    </footer>    
   </body>
 </html>
