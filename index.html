@@ -5,33 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Euclid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style.css">    
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="header__logo">
-        <img src="./img/Logo.svg" alt="Евклид проэктные системы">
-      </a>  
-      <div class="header__panel">
-        <nav class="header__nav nav-header">
+      <div class="header__top">
+        <a href="javascript:void(0);" class="header__hamburger" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="header__logo">
+          <img src="./img/Logo.svg" alt="Евклид проэктные системы">
+        </a>  
+        <div class="header__panel">
+          <nav class="header__nav nav-header">
+            <li class="nav-header__item">
+              <a href="" class="nav-header__link">О нас</a>
+            </li><a href=""></a>
+            <li class="nav-header__item"><a href="#" class="nav-header__link">Проекты</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link">Этапы</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link">Отзывы</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link">Контакты</a></li>
+          </nav>
+          <button class="header__search" aria-label="Поиск"></button>
+        </div>        
+      </div>
+      <div class="header__bottom" id="tabNav">
+        <nav class="nav-header nav-header--vertical">
           <li class="nav-header__item">
             <a href="" class="nav-header__link">О нас</a>
           </li><a href=""></a>
-          <li class="nav-header__item"><a href="#" class="nav-header__link">Проекты</a></li>
-          <li class="nav-header__item"><a href="#" class="nav-header__link">Этапы</a></li>
-          <li class="nav-header__item"><a href="#" class="nav-header__link">Отзывы</a></li>
-          <li class="nav-header__item"><a href="#" class="nav-header__link">Контакты</a></li>
+          <li class="nav-header__item">
+            <a href="#" class="nav-header__link">Проекты</a>
+          </li>
+          <li class="nav-header__item">
+            <a href="#" class="nav-header__link">Этапы</a>
+          </li>
+          <li class="nav-header__item">
+            <a href="#" class="nav-header__link">Отзывы</a>
+          </li>
+          <li class="nav-header__item">
+            <a href="#" class="nav-header__link">Контакты</a>
+          </li>
         </nav>
-        <button class="header__search" aria-label="Поиск"></button>
       </div>      
     </header>
     <main>
       <section class="hero">
         <div class="hero__container container">
-          <h1 class="hero__header">Проектные решения любой сложности</h1>
+          <h1 class="hero__header" aria-label="Проектные решения любой сложности">Проектные решения любой сложности</h1>
           <p class="hero__description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>   
-          <a href="#" class="hero__btn btn">Заказать расчёт</a>     
+          <a href="#" class="hero__btn btn" aria-roledescription="button">Заказать расчёт</a>     
         </div>        
       </section>
       <section class="about">
@@ -123,16 +148,16 @@
         <div class="footer__item footer__item-form">
           <h2 class="footer__header-form">Оставить заявку</h2>
           <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form application-form">
-            <p>
+            <p class="application-form__fielsed">
               <label for="user-name" class="visual-hidden">Фамилия, имя, отчество</label>
               <input class="application-form__input" id="user-name" type="text" placeholder="Фамилия, имя и отчество*" name="user-name">
             </p>
-            <p>
+            <p class="application-form__fielsed">
               <label for="Електронный адрес" class="visual-hidden"></label>
               <input class="application-form__input" type="text" name="user-email" id="user-email" placeholder="E-mail*">
             </p>
             <label for="user-message"></label>
-            <textarea class="application-form__textarea" id="user-message" cols="30" rows="10" placeholder="Сообщение" name="user-message"></textarea>
+            <textarea class="application-form__textarea" id="user-message" placeholder="Сообщение" name="user-message"></textarea>
             <div class="application-form__btn-box">
               <button type="submit" class="btn application-form__btn">Отправить  данные</button>
               <p class="application-form__help">
@@ -149,6 +174,16 @@
           <p class="footer__description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. </p>        
         </div>
       </div>  
-    </footer>    
+    </footer>   
+    <script>
+      function myFunction() {
+        var x = document.getElementById("tabNav");
+        if (x.style.display === "block") {
+          x.style.display = "none";          
+        } else {
+          x.style.display = "block";         
+        }
+      }
+      </script> 
   </body>
 </html>
