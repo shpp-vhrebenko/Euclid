@@ -216,7 +216,7 @@ main {
 }
 
 .header__bottom.container {
-  padding: 30px  50px ;
+  padding: 30px 50px;
 }
 
 .header__hamburger {
@@ -356,11 +356,11 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: stretch;  
+  align-content: stretch;
 }
 
 .about-detail__item {
-  flex: 1 1 50%;  
+  flex: 1 1 50%;
 }
 
 .about-detail__item:not(:last-child) {
@@ -638,7 +638,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   min-height: 594px;
-  padding: 50px 0px;  
+  padding: 50px 0px;
 }
 
 .footer__item {
@@ -795,7 +795,7 @@ svg.iconbar__icon:hover {
   justify-content: space-between;
 }
 
-.application-form__btn { 
+.application-form__btn {
   padding: 19px 50px;
   font-size: 16px;
   font-weight: 700;
@@ -891,7 +891,7 @@ svg.iconbar__icon:hover {
 
   .header {
     padding: 0;
-  }  
+  }
 
   .header__top.container {
     height: 100px;
@@ -965,10 +965,10 @@ svg.iconbar__icon:hover {
     line-height: 20px;
   }
 
-  .detail-cards__item {    
+  .detail-cards__item {
     padding-left: 318px;
-    padding-right: 125px;  
-    background-position: 80px center;  
+    padding-right: 125px;
+    background-position: 80px center;
   }
 
   .detail-cards__item p {
@@ -1039,7 +1039,6 @@ svg.iconbar__icon:hover {
   }
 }
 
-
 /* ======================== TABLET =================================== */
 
 @media (max-width: 768px) {
@@ -1062,8 +1061,8 @@ svg.iconbar__icon:hover {
 
   .hero__container {
     padding: 160px 40px;
-    background: url("../img/hero_tablet.jpg") no-repeat center center;    
-    background-size: cover;;
+    background: url("../img/hero_tablet.jpg") no-repeat center center;
+    background-size: cover;
   }
 
   .hero__header {
@@ -1092,21 +1091,21 @@ svg.iconbar__icon:hover {
     min-height: 650px;
   }
 
-  .detail-view__description p {  
-    flex: 1 1 65%;    
+  .detail-view__description p {
+    flex: 1 1 65%;
   }
 
-  .detail-view__box { 
-    flex: 1 1 35%;    
+  .detail-view__box {
+    flex: 1 1 35%;
   }
 
   .detail-view__btn {
-    padding: 20px 42px;    
+    padding: 20px 42px;
   }
 
   .detail-view__description {
     padding: 34px 40px;
-  } 
+  }
 
   .detail-cards {
     min-height: auto;
@@ -1115,7 +1114,7 @@ svg.iconbar__icon:hover {
 
   .detail-cards__item {
     flex: 0 0 auto;
-    padding: 35px 40px 35px 170px;    
+    padding: 35px 40px 35px 170px;
     background-size: 16%;
     background-position: 38px center;
   }
@@ -1127,7 +1126,7 @@ svg.iconbar__icon:hover {
   .how-work__nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;    
+    justify-content: space-between;
   }
 
   .how-work__content {
@@ -1157,7 +1156,7 @@ svg.iconbar__icon:hover {
   }
 
   .FAQ-list__question {
-    width: 90%;    
+    width: 90%;
   }
 
   .footer__container {
@@ -1178,15 +1177,14 @@ svg.iconbar__icon:hover {
     display: none;
   }
 
-  .footer__logo {    
+  .footer__logo {
     margin-bottom: 10px;
-  } 
-
+  }
 }
 
 /* ======================== MOBILE =================================== */
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
   .container {
     padding: 60px 15px 0;
   }
@@ -1222,9 +1220,9 @@ svg.iconbar__icon:hover {
     height: 70px;
   }
 
-  .header__search {    
+  .header__search {
     width: 28px;
-    height: 28px;    
+    height: 28px;
   }
 
   .header__logo img {
@@ -1345,8 +1343,8 @@ svg.iconbar__icon:hover {
     margin-bottom: 16px;
   }
 
-  .work-nav__item {   
-    font-size: 14px;    
+  .work-nav__item {
+    font-size: 14px;
     line-height: 18px;
   }
 
@@ -1380,16 +1378,15 @@ svg.iconbar__icon:hover {
     width: 100%;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;    
+    justify-content: space-between;
   }
 
   .how-work__btn:not(:last-child) {
     margin-right: 10px;
   }
 
-  .how-work__btn.btn {  
-    flex: 1 1 40%; 
-    /* height: 40px; */
+  .how-work__btn.btn {
+    flex: 1 1 40%;
     padding: 10px 42px;
     font-size: 12px;
     line-height: 15px;
@@ -1440,12 +1437,13 @@ svg.iconbar__icon:hover {
     padding-bottom: 32px;
   }
 
-  .application-form__input, .application-form__textarea {   
-    padding: 12px 24px;    
+  .application-form__input,
+  .application-form__textarea {
+    padding: 12px 24px;
   }
 
   .application-form__textarea {
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
   }
 
   .application-form__btn-box {
@@ -1466,10 +1464,10 @@ svg.iconbar__icon:hover {
     padding-bottom: 15px;
     margin-top: 10px;
     margin-bottom: 0px;
-    border-bottom: 1px solid  #595959;
+    border-bottom: 1px solid #595959;
   }
 
-  .footer__item-form {   
+  .footer__item-form {
     margin-bottom: 16px;
   }
 
@@ -1483,7 +1481,7 @@ svg.iconbar__icon:hover {
     width: 130px;
     height: auto;
     margin-bottom: 2px;
-  } 
+  }
 
   svg.iconbar__icon {
     transform: scale(0.7);
