@@ -197,7 +197,7 @@ main {
   z-index: 1;
 }
 
-.header__container {
+.header__top.container {
   width: 100%;
   padding: 14px 0;
   display: flex;
@@ -213,6 +213,10 @@ main {
   display: none;
   width: 100%;
   background: var(--white);
+}
+
+.header__bottom.container {
+  padding: 30px  50px ;
 }
 
 .header__hamburger {
@@ -249,6 +253,11 @@ main {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+}
+
+.nav-header--vertical .nav-header__item {
+  display: inline-block;
+  padding: 20px 0px;
 }
 
 .nav-header__item {
@@ -339,7 +348,7 @@ main {
 /* ABOUT US */
 
 .about__description {
-  max-width: 75%;
+  max-width: 70%;
   margin-bottom: 50px;
 }
 
@@ -347,13 +356,11 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 620px;
+  align-content: stretch;  
 }
 
 .about-detail__item {
-  flex: 1 1 50%;
+  flex: 1 1 50%;  
 }
 
 .about-detail__item:not(:last-child) {
@@ -393,6 +400,12 @@ main {
   flex-direction: row;
   justify-content: end;
   align-items: center;
+}
+
+.detail-view__btn {
+  padding: 18px 42px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .detail-cards {
@@ -633,7 +646,7 @@ main {
 }
 
 .footer__item-nav {
-  max-width: 382px;
+  max-width: 368px;
 }
 
 .footer__item-form {
@@ -642,6 +655,7 @@ main {
 
 .footer__item-desc {
   max-width: 360px;
+  padding-top: 74px;
 }
 
 .footer__logo {
@@ -756,7 +770,7 @@ svg.iconbar__icon:hover {
 }
 
 .application-form__textarea {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   min-height: 150px;
 }
 
@@ -781,8 +795,8 @@ svg.iconbar__icon:hover {
   justify-content: space-between;
 }
 
-.application-form__btn {
-  padding: 19px 52px;
+.application-form__btn { 
+  padding: 19px 50px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -823,7 +837,7 @@ svg.iconbar__icon:hover {
 .application-form__checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
   top: 2px;
-  left: 0;
+  left: 8px;
   width: 14px;
   height: 14px;
   border: 1px solid var(--lite-grey);
@@ -857,6 +871,8 @@ svg.iconbar__icon:hover {
   transform: rotate(-45deg);
 }
 
+/* ======================== DESCTOP =================================== */
+
 @media (min-width: 1025px) {
   .header__hamburger {
     display: none;
@@ -875,15 +891,28 @@ svg.iconbar__icon:hover {
 
   .header {
     padding: 0;
-  }
+  }  
 
-  .header__top {
+  .header__top.container {
     height: 100px;
     padding: 38px 50px;
   }
 
   .header__nav {
     display: none;
+  }
+
+  .header__hamburger {
+    font-size: 36px;
+  }
+
+  .hero {
+    padding: 0 50px;
+  }
+
+  .header__logo {
+    width: 150px;
+    height: 48px;
   }
 
   .hero__container {
@@ -907,9 +936,14 @@ svg.iconbar__icon:hover {
     margin-top: 60px;
   }
 
+  .about__header {
+    margin-bottom: 10px;
+  }
+
   .about__description {
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 62px;
   }
 
   .about-detail {
@@ -931,6 +965,12 @@ svg.iconbar__icon:hover {
     line-height: 20px;
   }
 
+  .detail-cards__item {    
+    padding-left: 318px;
+    padding-right: 125px;  
+    background-position: 80px center;  
+  }
+
   .detail-cards__item p {
     line-height: 32px;
   }
@@ -942,7 +982,7 @@ svg.iconbar__icon:hover {
   }
 
   .how-work__nav {
-    margin-bottom: 50px;
+    margin-bottom: 58px;
   }
 
   .how-work__description {
@@ -950,11 +990,23 @@ svg.iconbar__icon:hover {
     margin-right: 50px;
   }
 
+  .how-work__description h3 {
+    margin-top: -10px;
+  }
+
+  .how-work__description p {
+    margin-bottom: 23px;
+  }
+
   .how-work__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: bottom;
+  }
+
+  .FAQ__header {
+    margin-bottom: 32px;
   }
 
   .FAQ-list__question {
@@ -966,6 +1018,7 @@ svg.iconbar__icon:hover {
   }
 
   .footer__container {
+    padding-top: 46px;
     padding-bottom: 50px;
   }
 
@@ -973,21 +1026,28 @@ svg.iconbar__icon:hover {
     flex: 1 1 calc(100% / 2);
   }
 
+  .footer__item-nav {
+    max-width: 380px;
+  }
+
   .footer__item-desc {
     display: none;
   }
 
   .application-form__btn {
-    padding: 19px 25px;
+    padding: 19px 38px;
   }
 }
+
+
+/* ======================== TABLET =================================== */
 
 @media (max-width: 768px) {
   main {
     padding-top: 70px;
   }
 
-  .header__top {
+  .header__top.container {
     padding: 21px 50px;
     height: 70px;
   }
@@ -1000,31 +1060,91 @@ svg.iconbar__icon:hover {
     top: 70px;
   }
 
+  .hero__container {
+    padding: 160px 40px;
+    background: url("../img/hero_tablet.jpg") no-repeat center center;    
+    background-size: cover;;
+  }
+
   .hero__header {
     font-size: 50px;
+    line-height: 60px;
   }
 
   .hero__description {
     font-size: 18px;
   }
 
+  .hero__btn {
+    margin-top: 58px;
+  }
+
+  .about__header {
+    margin-bottom: 8px;
+  }
+
+  .about__description {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  .detail-view {
+    min-height: 650px;
+  }
+
+  .detail-view__description p {  
+    flex: 1 1 65%;    
+  }
+
+  .detail-view__box { 
+    flex: 1 1 35%;    
+  }
+
+  .detail-view__btn {
+    padding: 20px 42px;    
+  }
+
   .detail-view__description {
     padding: 34px 40px;
+  } 
+
+  .detail-cards {
+    min-height: auto;
+    justify-content: auto;
   }
 
   .detail-cards__item {
-    padding: 35px 40px 35px 170px;
-    background-size: 20%;
-    background-position: 20px center;
+    flex: 0 0 auto;
+    padding: 35px 40px 35px 170px;    
+    background-size: 16%;
+    background-position: 38px center;
+  }
+
+  .how-work__header {
+    margin-bottom: 46px;
+  }
+
+  .how-work__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
   }
 
   .how-work__content {
     flex-direction: column;
   }
 
+  .how-work__nav {
+    margin-bottom: 46px;
+  }
+
   .how-work__img {
     order: 1;
-    margin-bottom: 38px;
+    margin-bottom: 48px;
+  }
+
+  .how-work__img img {
+    max-height: 284px;
   }
 
   .how-work__description {
@@ -1032,11 +1152,20 @@ svg.iconbar__icon:hover {
     margin-right: 0;
   }
 
+  .how-work__description p {
+    margin-bottom: 20px;
+  }
+
+  .FAQ-list__question {
+    width: 90%;    
+  }
+
   .footer__container {
     flex-direction: column;
   }
 
   .footer__item-form {
+    max-width: 540px;
     order: 1;
     margin-bottom: 50px;
   }
@@ -1048,16 +1177,37 @@ svg.iconbar__icon:hover {
   .footer__nav {
     display: none;
   }
+
+  .footer__logo {    
+    margin-bottom: 10px;
+  } 
+
 }
 
-@media (max-width: 320px) {
+/* ======================== MOBILE =================================== */
+
+@media (max-width: 360px) {
   .container {
     padding: 60px 15px 0;
+  }
+
+  .header__top.container {
+    padding: 21px 14px;
+    height: 70px;
+  }
+
+  .header__logo {
+    width: 110px;
+    height: 35px;
   }
 
   .section-header {
     font-size: 24px;
     line-height: 29px;
+  }
+
+  .hero {
+    padding: 0 15px;
   }
 
   .hero__container {
@@ -1072,6 +1222,11 @@ svg.iconbar__icon:hover {
     height: 70px;
   }
 
+  .header__search {    
+    width: 28px;
+    height: 28px;    
+  }
+
   .header__logo img {
     height: 35px;
   }
@@ -1080,6 +1235,7 @@ svg.iconbar__icon:hover {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+    margin-bottom: 6px;
   }
 
   .hero__description {
@@ -1091,19 +1247,25 @@ svg.iconbar__icon:hover {
   .hero__btn {
     margin-right: auto;
     margin-left: auto;
-    padding: 12px 30px;
+    padding: 12px 10px;
     margin-top: 32px;
     font-size: inherit;
     line-height: inherit;
   }
 
+  .about__header {
+    margin-bottom: 20px;
+  }
+
   .about__description {
     margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 28px;
   }
 
   .about-detail__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 240px;
+    margin-bottom: 202px;
   }
 
   .detail-view {
@@ -1116,7 +1278,7 @@ svg.iconbar__icon:hover {
     flex-direction: column;
     padding: 0;
     position: absolute;
-    bottom: -110%;
+    bottom: -98%;
     left: 0;
     background: none;
   }
@@ -1150,14 +1312,18 @@ svg.iconbar__icon:hover {
   }
 
   .detail-cards__item {
-    padding: 80px 0 0 0;
+    padding: 88px 0 0 0;
     background-size: 25%;
-    background-position: 0 15px;
+    background-position: 2px 24px;
     border: none;
   }
 
+  .detail-cards__item:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
   .detail-cards__item h3 {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
@@ -1169,7 +1335,7 @@ svg.iconbar__icon:hover {
   }
 
   .how-work__header {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
 
   .how-work__nav {
@@ -1179,12 +1345,21 @@ svg.iconbar__icon:hover {
     margin-bottom: 16px;
   }
 
+  .work-nav__item {   
+    font-size: 14px;    
+    line-height: 18px;
+  }
+
   .work-nav__item:not(:last-child) {
     margin: 0;
   }
 
   .how-work__img {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
+  }
+
+  .how-work__img img {
+    min-height: 160px;
   }
 
   .how-work__description h3 {
@@ -1202,32 +1377,38 @@ svg.iconbar__icon:hover {
   }
 
   .how-work__btns {
-    display: flex;
+    width: 100%;
+    display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;    
   }
 
   .how-work__btn:not(:last-child) {
     margin-right: 10px;
   }
 
-  .how-work__btn.btn {
-    flex: 1 1 60%;
-    padding: 15px 11px;
+  .how-work__btn.btn {  
+    flex: 1 1 40%; 
+    /* height: 40px; */
+    padding: 10px 42px;
     font-size: 12px;
     line-height: 15px;
   }
 
   .how-work__btn.btn.btn-white {
     flex: 1 1 40%;
-    padding: 15px 11px;
+    padding: 10px 11px;
     font-size: 12px;
     line-height: 15px;
   }
 
+  .FAQ__header {
+    margin-bottom: 20px;
+  }
+
   .FAQ-list__question {
     font-size: 14px;
-    font-weight: 7 00;
+    font-weight: 700;
     line-height: 24px;
   }
 
@@ -1259,6 +1440,14 @@ svg.iconbar__icon:hover {
     padding-bottom: 32px;
   }
 
+  .application-form__input, .application-form__textarea {   
+    padding: 12px 24px;    
+  }
+
+  .application-form__textarea {
+    margin-bottom: 20px;    
+  }
+
   .application-form__btn-box {
     display: flex;
     justify-content: space-between;
@@ -1268,7 +1457,20 @@ svg.iconbar__icon:hover {
   .application-form__btn {
     margin-right: auto;
     margin-left: auto;
-    padding: 12px 24px;
+    padding: 10px 28px;
+    font-size: 12px;
+  }
+
+  .application-form__help {
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid  #595959;
+  }
+
+  .footer__item-form {   
+    margin-bottom: 16px;
   }
 
   .footer__item-nav {
@@ -1280,13 +1482,14 @@ svg.iconbar__icon:hover {
   .footer__logo {
     width: 130px;
     height: auto;
-  }
+    margin-bottom: 2px;
+  } 
 
   svg.iconbar__icon {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 
   .iconbar__item:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 0;
   }
 }

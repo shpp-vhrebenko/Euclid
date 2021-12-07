@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+  main {
+    padding-top: 70px;
+  }
+
+  .header__top {
+    padding: 21px 50px;
+    height: 70px;
+  }
+
+  .header__logo img {
+    height: 48px;
+  }
+
+  .header__bottom {
+    top: 70px;
+  }
+
+  .hero__header {
+    font-size: 50px;
+  }
+
+  .hero__description {
+    font-size: 18px;
+  }
+
+  .detail-view__description {
+    padding: 34px 40px;
+  } 
+
+  .detail-cards__item {
+    padding: 35px 40px 35px 170px;
+    background-size: 20%;
+    background-position: 20px center;
+  }
+
+  .how-work__content {
+    flex-direction: column;
+  }
+
+  .how-work__img {
+    order: 1;
+    margin-bottom: 38px;
+  }
+
+  .how-work__description {
+    order: 2;
+    margin-right: 0;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__item-form {
+    order: 1;
+    margin-bottom: 50px;
+  }
+
+  .footer__item-nav {
+    order: 2;
+  }
+
+  .footer__nav {
+    display: none;
+  }
+}
