@@ -220,6 +220,7 @@ main {
 }
 
 .header__hamburger {
+  display: none;
   font-size: 26px;
   color: var(--black);
 }
@@ -871,18 +872,16 @@ svg.iconbar__icon:hover {
   transform: rotate(-45deg);
 }
 
+
 /* ======================== DESCTOP =================================== */
 
-@media (min-width: 1025px) {
-  .header__hamburger {
-    display: none;
-  }
-
-  .header__bottom {
-    display: none;
-    opacity: 0;
+@media (min-width: 1024px) and (max-width: 1770px) {
+  .header__top.container {
+    padding: 14px 20px;
   }
 }
+
+
 
 @media (max-width: 1024px) {
   .container {
@@ -903,8 +902,9 @@ svg.iconbar__icon:hover {
   }
 
   .header__hamburger {
+    display: block;
     font-size: 36px;
-  }
+  } 
 
   .hero {
     padding: 0 50px;
