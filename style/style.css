@@ -61,6 +61,10 @@
   --green: #97ee3f;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -194,25 +198,33 @@ main {
   left: 0;
   width: 100%;
   background: var(--white);
-  z-index: 1;
+  z-index: 100;
 }
 
 .header__top.container {
   width: 100%;
   padding: 14px 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__bottom {
+.header__bottom {  
   position: fixed;
   top: 100px;
-  left: 0;
-  display: none;
+  left: 0;  
   width: 100%;
   background: var(--white);
+  transition: transform .3s ease-in-out;
+  transform: translateX(-101%);
+  visibility: hidden;
+}
+
+.header__bottom.header__bottom--active { 
+  transform: none;
+  visibility: initial;
 }
 
 .header__bottom.container {
@@ -238,6 +250,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 10px;
 }
 
 .nav-header {
@@ -315,11 +328,33 @@ main {
 /* HERO */
 
 .hero__container {
+  position: relative;
   width: 100%;
   min-height: 620px;
-  padding: 100px 78px;
+  padding: 0;
+  /* padding: 100px 78px; */
   background: url("../img/hero.jpg") center center no-repeat;
   background-size: cover;
+}
+
+.hero__content {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 100px 0;
+  margin: 0 78px;
+  z-index: 2;
+}
+
+.swiper {
+  width: 100%;
+  height: 620px;
+}
+
+.swiper img {
+  width: 100%;
+  height: auto;
 }
 
 .hero__header {
@@ -468,27 +503,26 @@ main {
   margin-right: 85px;
 }
 
-.work-nav__link {
+.work-nav__button {
   color: var(--black);
-}
-
-.work-nav__link:focus,
-.work-nav__link:hover {
-  color: var(--orange);
-  outline: none;
-}
-
-.work-nav__link:focus:not(:focus-visible) {
   border: none;
-  outline: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
 }
 
-.work-nav__link:focus-visible {
+.work-nav__button:focus,
+.work-nav__button:hover {
   color: var(--orange);
   outline: none;
 }
+
 
 .how-work__content {
+  display: none;  
+}
+
+.how-work__content--active {
   display: flex;
   flex-direction: row;
 }
@@ -514,8 +548,12 @@ main {
 }
 
 .how-work__description p {
-  margin-top: 0;
   margin-bottom: 42px;
+}
+
+.how-work__description p,
+.how-work__description li {
+  margin-top: 0;  
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;

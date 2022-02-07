@@ -4,59 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Euclid</title>
+    <title>Euclid</title>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__top container">        
-        <a href="javascript:void(0);" class="header__hamburger" onclick="myFunction()">
+        <a href="javascript:void(0);" class="header__hamburger">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="index.html" class="header__logo">
+        <a href="#" class="header__logo">
           <img src="./img/Logo.svg" alt="Евклид проэктные системы">
         </a>  
         <nav class="header__panel">
           <ul class="header__nav nav-header">
             <li class="nav-header__item">
-              <a href="" class="nav-header__link">О нас</a>
+              <a href="" class="nav-header__link" data-goto="about">О нас</a>
             </li><a href=""></a>
-            <li class="nav-header__item"><a href="#" class="nav-header__link">Проекты</a></li>
-            <li class="nav-header__item"><a href="#" class="nav-header__link">Этапы</a></li>
-            <li class="nav-header__item"><a href="#" class="nav-header__link">Отзывы</a></li>
-            <li class="nav-header__item"><a href="#" class="nav-header__link">Контакты</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto="how-work">Этапы</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto="FAQ">Вопросы</a></li>           
+            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto="footer">Контакты</a></li>
           </ul>
           <button class="header__search" aria-label="Поиск"></button>
         </nav>                     
       </div>
-      <div class="header__bottom container" id="tabNav">
+      <div class="header__bottom container">
         <nav class="nav-header nav-header--vertical">
           <li class="nav-header__item">
-            <a href="" class="nav-header__link">О нас</a>
-          </li><a href=""></a>
-          <li class="nav-header__item">
-            <a href="#" class="nav-header__link">Проекты</a>
+            <a href="#" class="nav-header__link" data-goto=".about">О нас</a>
           </li>
-          <li class="nav-header__item">
-            <a href="#" class="nav-header__link">Этапы</a>
-          </li>
-          <li class="nav-header__item">
-            <a href="#" class="nav-header__link">Отзывы</a>
-          </li>
-          <li class="nav-header__item">
-            <a href="#" class="nav-header__link">Контакты</a>
-          </li>
+          <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".how-work">Этапы</a></li>
+          <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".FAQ">Вопросы</a></li>           
+          <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".footer">Контакты</a></li>
         </nav>
-      </div>      
+      </div>
     </header>
     <main>
       <section class="hero">
         <div class="hero__container container">
-          <h1 class="hero__header" aria-label="Проектные решения любой сложности">Проектные решения любой сложности</h1>
-          <p class="hero__description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>   
-          <a href="#" class="hero__btn btn" aria-roledescription="button">Заказать расчёт</a>     
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" >
+              <img src="./img/hero.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/hero_2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/hero_3.jpg" alt="">
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+          </div>
+          
+          <div class="hero__content">
+            <h1 class="hero__header" aria-label="Проектные решения любой сложности">Проектные решения любой сложности</h1>
+            <p class="hero__description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>   
+            <a href="#" class="hero__btn btn" aria-roledescription="button">Заказать расчёт</a>  
+          </div>            
         </div>        
       </section>
       <section class="about">
@@ -92,15 +112,62 @@
         <div class="how-work__container container">
           <h2 class="how-work__header section-header">Как мы работаем</h2>
           <nav class="how-work__nav work-nav">
-            <li class="work-nav__item"><a href="#" class="work-nav__link">шаг1</a></li>
-            <li class="work-nav__item"><a href="#" class="work-nav__link">шаг2</a></li>
-            <li class="work-nav__item"><a href="#" class="work-nav__link">шаг3</a></li>
-            <li class="work-nav__item"><a href="#" class="work-nav__link">шаг4</a></li>
+            <li class="work-nav__item"><button class="work-nav__button" data-path="one">шаг1</button></li>
+            <li class="work-nav__item"><button class="work-nav__button" data-path="two">шаг2</button></li>
+            <li class="work-nav__item"><button class="work-nav__button" data-path="three">шаг3</button></li>
+            <li class="work-nav__item"><button class="work-nav__button" data-path="four">шаг4</button></li>
           </nav>
-          <div class="how-work__content">
+          <div class="how-work__content how-work__content--active" data-target="one">
             <div class="how-work__description">
-              <h3>Проводим консультацию</h3>
-              <p>Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.</p>
+              <h3>Проводим сбор информации</h3>
+              <p>Работа инженера-проектировщика начинается с тщательного изучения строения, чтоб составить техническое задание, а дальше все это нужно утвердить с самим заказчиком. В ходе всей этой работы утверждается смета, с учетом стоимости всех работ по исследованию и монтажу, а также оборудования и материалы.</p>
+              <p>В случаях разработки проекта для уже существующих зданий, может возникнуть потребность в перепланировке помещения. Кроме того, что проект должен оценить сам заказчик, он должен одобряться соответствующими органами госконтроля и в случаях необходимости нужно вносить разного рода изменения.</p>
+              <ol>
+                <li>Присылаете исходную информацию для конструктора: подробное описание проблемы, желательно с эскизами и фотографиями. Конструктору необходимо время, чтобы подготовиться по данному вопросу.</li>
+                <li>Если вопрос находится в нашей компетенции, согласовываем время и место встречи.</li>
+                <li>Конструктор подробно отвечает на все вопросы. При необходимости составляет письменный ответ.</li>
+              </ol>
+              <div class="how-work__btns">
+                <button class="how-work__btn btn">Подробнее</button>
+                <a href="#" class="how-work__btn btn btn-white">Договор</a>
+              </div>
+            </div>
+            <div class="how-work__img">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+            </div>
+          </div>
+          <div class="how-work__content" data-target="two">
+            <div class="how-work__description">
+              <h3>Техническая консультация</h3>
+              <p>Техническую консультацию оказывает специалист по необходимому вам профилю с квалификацией не ниже ведущего инженера: конструктор, расчетчик, тепловик, специалист по 3d-сканированию и пр. Главным требованием для наших консультантов мы ставим наличие большого опыта в рассматриваемой тематике.</p>
+
+              <P>При необходимости мы организовываем консультации с представителями производств.</p>
+              <div class="how-work__btns">
+                <button class="how-work__btn btn">Подробнее</button>
+                <a href="#" class="how-work__btn btn btn-white">Договор</a>
+              </div>
+            </div>
+            <div class="how-work__img">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+            </div>
+          </div>
+          <div class="how-work__content" data-target="three">
+            <div class="how-work__description">
+              <h3>Создание 3D проекта</h3>
+              <p>После разработки проекта его графически воплощают в специальной компьютерной программе. Весь проект должен согласовываться с другими специалистами, одновременно работающими над одним и тем же проектом. Все это нужно для того, чтоб в будущем не возникло каких либо проблем.</p>              
+              <div class="how-work__btns">
+                <button class="how-work__btn btn">Подробнее</button>
+                <a href="#" class="how-work__btn btn btn-white">Договор</a>
+              </div>
+            </div>
+            <div class="how-work__img">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+            </div>
+          </div>
+          <div class="how-work__content" data-target="four">
+            <div class="how-work__description">
+              <h3>Составление плана проекта</h3>
+              <p>После чего, составится план, по которому будут происходить любые работы, чтоб не срывать графики. Сам инженер-проектировщик будет руководить рабочей бригадой, составляя им техзадания. Такой контроль в обязательном порядке проводится инженером, который в конечном итоге составит документы, где укажет абсолютно все, что касается данного проекта, включая различные схемы с планами.</p>              
               <div class="how-work__btns">
                 <button class="how-work__btn btn">Подробнее</button>
                 <a href="#" class="how-work__btn btn btn-white">Договор</a>
@@ -173,16 +240,9 @@
           <p class="footer__description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. </p>        
         </div>
       </div>  
-    </footer>   
-    <script>
-      function myFunction() {
-        var x = document.getElementById("tabNav");
-        if (x.style.display === "block") {
-          x.style.display = "none";          
-        } else {
-          x.style.display = "block";         
-        }
-      }
-      </script> 
+    </footer>    
+    <script src="js/main.js"></script>
+    <script src="js/tabs.js"></script>    
+    <script src="js/swiper.js"></script>
   </body>
 </html>
