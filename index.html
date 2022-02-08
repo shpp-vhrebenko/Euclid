@@ -23,11 +23,11 @@
         <nav class="header__panel">
           <ul class="header__nav nav-header">
             <li class="nav-header__item">
-              <a href="" class="nav-header__link" data-goto="about">О нас</a>
+              <a href="" class="nav-header__link" data-goto=".about">О нас</a>
             </li><a href=""></a>
-            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto="how-work">Этапы</a></li>
-            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto="FAQ">Вопросы</a></li>           
-            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto="footer">Контакты</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".how-work">Этапы</a></li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".FAQ">Вопросы</a></li>           
+            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".footer">Контакты</a></li>
           </ul>
           <button class="header__search" aria-label="Поиск"></button>
         </nav>                     
@@ -183,11 +183,47 @@
         <div class="FAQ__container container">
           <h2 class="FAQ__header section-header">Часто задаваемые вопросы</h2> 
           <nav class="FAQ__list FAQ-list">
-            <li class="FAQ-list__item"><p class="FAQ-list__question">Из чего формируется конечная стоимость проекта?</p><button class="FAQ-list__button" aria-label="Из чего формируется конечная стоимость проекта?"></button></li>
-            <li class="FAQ-list__item"><p class="FAQ-list__question">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p><button class="FAQ-list__button" aria-label="У меня есть свой проект. Сможем ли мы его доработать / реализовать?"></button></li>
-            <li class="FAQ-list__item"><p class="FAQ-list__question">Я выбираю между разными компаниями. В чём ваше отличие?</p><button class="FAQ-list__button" aria-label="Я выбираю между разными компаниями. В чём ваше отличие?"></button></li>
-            <li class="FAQ-list__item"><p class="FAQ-list__question">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? </p><button class="FAQ-list__button" aria-label="Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?"></button></li>
-            <li class="FAQ-list__item"><p class="FAQ-list__question">Могу ли я вернуть деньги на каком-либо из этапов работ?</p><button class="FAQ-list__button" aria-label="Могу ли я вернуть деньги на каком-либо из этапов работ?"></button></li>
+            <li class="FAQ-list__item FAQ-item">
+              <div class="FAQ-item__text">
+                <p class="FAQ-list__question">Из чего формируется конечная стоимость проекта?</p>
+                <button class="FAQ-list__button" data-spoller aria-label="Из чего формируется конечная стоимость проекта?"></button>
+              </div>
+              <div class="FAQ-item__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+              </div>
+            </li>
+            <li class="FAQ-list__item FAQ-item">
+              <div class="FAQ-item__text">
+                <p>У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p><button class="FAQ-list__button" data-spoller aria-label="У меня есть свой проект. Сможем ли мы его доработать / реализовать?"></button>
+              </div>
+              <div class="FAQ-item__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+              </div>
+            </li>
+            <li class="FAQ-list__item FAQ-item">
+              <div class="FAQ-item__text">
+                <p>Я выбираю между разными компаниями. В чём ваше отличие?</p><button class="FAQ-list__button" data-spoller aria-label="Я выбираю между разными компаниями. В чём ваше отличие?"></button>
+              </div>
+              <div class="FAQ-item__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+              </div>
+            </li>
+            <li class="FAQ-list__item FAQ-item">
+              <div class="FAQ-item__text">
+                <p>Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? </p><button class="FAQ-list__button" data-spoller aria-label="Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?"></button>
+              </div>
+              <div class="FAQ-item__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+              </div>
+            </li>
+            <li class="FAQ-list__item FAQ-item">
+              <div class="FAQ-item__text">
+                <p>Могу ли я вернуть деньги на каком-либо из этапов работ?</p><button class="FAQ-list__button" data-spoller aria-label="Могу ли я вернуть деньги на каком-либо из этапов работ?"></button>
+              </div>
+              <div class="FAQ-item__content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+              </div>
+            </li>
           </nav>         
         </div>
       </section> 

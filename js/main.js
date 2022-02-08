@@ -1,10 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
- /*  if(document.querySelector('.header__hamburger')) {
-    document.querySelector('.header__hamburger').addEventListener('click', function() {
-      document.querySelector('.header__bottom').classList.toggle('header__bottom--active');
-    })
-  } */
-  
+document.addEventListener('DOMContentLoaded', function() {  
   const navButton = document.querySelector(".header__hamburger");
   const navList = document.querySelector(".header__bottom");
 
@@ -43,6 +37,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         e.preventDefault();
       }
+    }
+  }
+
+
+  /* SPOLERS */
+
+  const accordions = document.querySelectorAll('.FAQ-list__item');
+
+  if(accordions.length > 0) {
+    for(item of accordions) {
+      item.addEventListener('click', function() {
+        if(this.classList.contains('active')) {
+          this.classList.remove('active');
+        } else {
+          for(el of accordions) {
+            el.classList.remove('active');
+          }
+          this.classList.add('active');
+        }
+      })
     }
   }
 
