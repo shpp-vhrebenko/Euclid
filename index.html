@@ -13,13 +13,15 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top container">        
+      <div class="header__container container">            
         <a href="javascript:void(0);" class="header__hamburger">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="#" class="header__logo">
-          <img src="./img/Logo.svg" alt="Евклид проэктные системы">
-        </a>  
+        <div class="header__logo">
+          <a href="#" class="header__link">
+            <img src="./img/Logo.svg" alt="Евклид проэктные системы">
+          </a> 
+        </div> 
         <nav class="header__panel">
           <ul class="header__nav nav-header">
             <li class="nav-header__item">
@@ -28,20 +30,10 @@
             <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".how-work">Этапы</a></li>
             <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".FAQ">Вопросы</a></li>           
             <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".footer">Контакты</a></li>
-          </ul>
-          <button class="header__search" aria-label="Поиск"></button>
-        </nav>                     
-      </div>
-      <div class="header__bottom container">
-        <nav class="nav-header nav-header--vertical">
-          <li class="nav-header__item">
-            <a href="#" class="nav-header__link" data-goto=".about">О нас</a>
-          </li>
-          <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".how-work">Этапы</a></li>
-          <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".FAQ">Вопросы</a></li>           
-          <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".footer">Контакты</a></li>
+          </ul>          
         </nav>
-      </div>
+        <button class="header__search" aria-label="Поиск"></button>                     
+      </div>      
     </header>
     <main>
       <section class="hero">
@@ -141,7 +133,7 @@
               <h3>Техническая консультация</h3>
               <p>Техническую консультацию оказывает специалист по необходимому вам профилю с квалификацией не ниже ведущего инженера: конструктор, расчетчик, тепловик, специалист по 3d-сканированию и пр. Главным требованием для наших консультантов мы ставим наличие большого опыта в рассматриваемой тематике.</p>
 
-              <P>При необходимости мы организовываем консультации с представителями производств.</p>
+              <p>При необходимости мы организовываем консультации с представителями производств.</p>
               <div class="how-work__btns">
                 <button class="how-work__btn btn">Подробнее</button>
                 <a href="#" class="how-work__btn btn btn-white">Договор</a>
