@@ -203,10 +203,10 @@ main {
 
 .header__container {
   width: 100%;
-  padding: 14px 10px 0;
+  padding: 14px 0;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;  
+  flex-direction: row;
   align-items: center;
 }
 
@@ -222,7 +222,7 @@ main {
 }
 
 .header__logo {
-  flex-grow: 0.5;    
+  flex-grow: 0.5;
 }
 
 .header__link {
@@ -237,7 +237,7 @@ main {
   flex-grow: 0.5;
   display: flex;
   flex-direction: row;
-  align-items: center;  
+  align-items: center;
 }
 
 .nav-header {
@@ -307,35 +307,38 @@ main {
 .hero__container {
   position: relative;
   width: 100%;
-  min-height: 620px;
+  height: 620px;
   padding: 0;
-  /* padding: 100px 78px; */
-  background: url("../img/hero.jpg") center center no-repeat;
-  background-size: cover;
+  overflow: hidden;
 }
 
 .hero__content {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  height: 100%;
   position: absolute;
-  left: 0;
   top: 0;
-  padding: 100px 0;
-  margin: 0 78px;
-  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 5;
 }
 
 .swiper {
   width: 100%;
-  height: 620px;
+  height: 100%;
 }
 
 .swiper img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__header {
-  width: 52%;
   margin-bottom: 28px;
   font-family: Montserrat;
   font-style: normal;
@@ -346,7 +349,6 @@ main {
 }
 
 .hero__description {
-  width: 52%;
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -494,9 +496,8 @@ main {
   outline: none;
 }
 
-
 .how-work__content {
-  display: none;  
+  display: none;
 }
 
 .how-work__content--active {
@@ -530,7 +531,7 @@ main {
 
 .how-work__description p,
 .how-work__description li {
-  margin-top: 0;  
+  margin-top: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -568,12 +569,12 @@ main {
   border-bottom: 1px solid var(--orange);
 }
 
-.FAQ-list__item:hover  .FAQ-list__button {
+.FAQ-list__item:hover .FAQ-list__button {
   background: var(--orange);
 }
 
-.FAQ-list__item:hover  .FAQ-list__button::after,
-.FAQ-list__item:hover  .FAQ-list__button::before {
+.FAQ-list__item:hover .FAQ-list__button::after,
+.FAQ-list__item:hover .FAQ-list__button::before {
   background: var(--white);
 }
 
@@ -582,7 +583,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 30px 0;  
+  padding: 30px 0;
 }
 
 .FAQ-item__text p {
@@ -597,20 +598,20 @@ main {
 
 .FAQ-item__content {
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  height: 0;   
+  height: 0;
   line-height: 32px;
   color: var(--black);
-  transition: opacity .4s ease .2s;  
+  transition: opacity 0.4s ease 0.2s;
 }
 
-.FAQ-item.active .FAQ-item__content {  
-  visibility: visible;  
-  height: auto; 
+.FAQ-item.active .FAQ-item__content {
+  visibility: visible;
+  height: auto;
   opacity: 1;
-  padding: 40px; 
+  padding: 40px;
 }
 
 .FAQ-list__button {
@@ -651,7 +652,7 @@ main {
   width: 31px;
   height: 1px;
   background: var(--grey);
-  transition: transform .3s ease 0s;
+  transition: transform 0.3s ease 0s;
 }
 
 .FAQ-list__button::before {
@@ -912,16 +913,17 @@ svg.iconbar__icon:hover {
   transform: rotate(-45deg);
 }
 
-
 /* ======================== DESCTOP =================================== */
 
-@media (min-width: 1024px) and (max-width: 1770px) {
-  .header__top.container {
-    padding: 14px 20px;
+@media (max-width: 1770px) {
+  .header__container {
+    padding: 14px 10px;
+  }
+
+  .hero__content {
+    padding: 160px 78px;
   }
 }
-
-
 
 @media (max-width: 1024px) {
   .container {
@@ -933,23 +935,23 @@ svg.iconbar__icon:hover {
   }
 
   .header__container {
-    height: 100px;
+    min-height: 100px;
     padding: 38px 50px;
   }
 
   .header__panel {
     position: fixed;
     top: 100px;
-    left: 0;  
-    width: 100%;    
+    left: 0;
+    width: 100%;
     padding: 30px 50px;
     background: var(--white);
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transform: translateX(-101%);
     visibility: hidden;
   }
 
-  .header__panel.header__panel--active { 
+  .header__panel.header__panel--active {
     transform: none;
     visibility: initial;
   }
@@ -959,16 +961,16 @@ svg.iconbar__icon:hover {
     align-items: flex-start;
     width: 100%;
   }
-  
-  .nav-header .nav-header__item {   
+
+  .nav-header .nav-header__item {
     display: inline-block;
     padding: 20px 0px;
-  }  
+  }
 
   .header__hamburger {
     display: block;
     font-size: 36px;
-  } 
+  }
 
   .header__search {
     display: inline-block;
@@ -985,6 +987,11 @@ svg.iconbar__icon:hover {
   }
 
   .hero__container {
+    padding: 0;
+  }
+
+  .hero__content {
+    width: 85%;
     padding: 160px 78px;
   }
 
@@ -1117,21 +1124,19 @@ svg.iconbar__icon:hover {
 
   .header__container.container {
     padding: 21px 50px;
-    height: 70px;
+    min-height: 70px;
   }
 
   .header__logo img {
     height: 48px;
   }
 
-  .header__bottom {
-    top: 70px;
+  .header__panel {
+    top: 90px;
   }
 
-  .hero__container {
+  .hero__content {
     padding: 160px 40px;
-    background: url("../img/hero_tablet.jpg") no-repeat center center;
-    background-size: cover;
   }
 
   .hero__header {
@@ -1258,12 +1263,21 @@ svg.iconbar__icon:hover {
     padding: 60px 15px 0;
   }
 
-  .header__top.container {
-    padding: 21px 14px;
-    height: 70px;
+  .header__container.container {
+    padding: 24px 14px;
+    min-height: 70px;
   }
 
-  .header__logo {
+  .header__search {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header__panel {
+    top: 70px;
+  }
+
+  .header__link {
     width: 110px;
     height: 35px;
   }
@@ -1277,27 +1291,6 @@ svg.iconbar__icon:hover {
     padding: 0 15px;
   }
 
-  .hero__container {
-    display: flex;
-    flex-direction: column;
-    min-height: 308px;
-    padding: 60px 24px;
-  }
-
-  .header__top {
-    padding: 24px 15px;
-    height: 70px;
-  }
-
-  .header__search {
-    width: 28px;
-    height: 28px;
-  }
-
-  .header__logo img {
-    height: 35px;
-  }
-
   .hero__header {
     font-size: 20px;
     line-height: 24px;
@@ -1309,6 +1302,11 @@ svg.iconbar__icon:hover {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
+  }
+
+  .hero__content {
+    width: 80%;
+    padding: 0 24px;
   }
 
   .hero__btn {
