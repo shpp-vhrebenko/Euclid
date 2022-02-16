@@ -4,52 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Euclid</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style/normalize.css">
-    <link rel="stylesheet" href="./style/style.css">    
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Euclid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
-      <div class="header__container container">            
+      <div class="header__container container">
         <a href="javascript:void(0);" class="header__hamburger">
           <i class="fa fa-bars"></i>
         </a>
         <div class="header__logo">
-          <a href="#" class="header__link">
-            <img src="./img/Logo.svg" alt="Евклид проэктные системы">
-          </a> 
-        </div> 
-        <nav class="header__panel">
+          <a
+            aria-label="Логотип сайта Евклид проэктные системы"
+            href="#"
+            class="header__link"
+          >
+            <img src="./img/Logo.svg" alt="Евклид проэктные системы" />
+          </a>
+        </div>
+        <nav class="header__panel" aria-label="Главная навигация по сайту">
           <ul class="header__nav nav-header">
             <li class="nav-header__item">
-              <a href="" class="nav-header__link" data-goto=".about">О нас</a>
-            </li><a href=""></a>
-            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".how-work">Этапы</a></li>
-            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".FAQ">Вопросы</a></li>           
-            <li class="nav-header__item"><a href="#" class="nav-header__link" data-goto=".footer">Контакты</a></li>
-          </ul>          
+              <a href="#" class="nav-header__link" data-goto=".about">О нас</a>
+            </li>
+            <li class="nav-header__item">
+              <a href="#" class="nav-header__link" data-goto=".how-work"
+                >Этапы</a
+              >
+            </li>
+            <li class="nav-header__item">
+              <a href="#" class="nav-header__link" data-goto=".FAQ">Вопросы</a>
+            </li>
+            <li class="nav-header__item">
+              <a href="#" class="nav-header__link" data-goto=".footer"
+                >Контакты</a
+              >
+            </li>
+          </ul>
         </nav>
-        <button class="header__search" aria-label="Поиск"></button>                     
-      </div>      
+        <button class="header__search" aria-label="Поиск"></button>
+      </div>
     </header>
     <main>
       <section class="hero">
+        <h2 class="visual-hidden">Проектные решения любой сложности</h2>
         <div class="hero__container container">
-          <div class="swiper">
-              <!-- Additional required wrapper -->
+          <div
+            class="swiper"
+            aria-roledescription="carousel"
+            aria-label="Карусель изображений Евклид проэктные системы"
+          >
+            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide" >
-                <img src="./img/hero.jpg" alt="">
+              <div class="swiper-slide">
+                <img src="./img/hero.jpg" alt="" />
               </div>
               <div class="swiper-slide">
-                <img src="./img/hero_2.jpg" alt="">
+                <img src="./img/hero_2.jpg" alt="" />
               </div>
               <div class="swiper-slide">
-                <img src="./img/hero_3.jpg" alt="">
+                <img src="./img/hero_3.jpg" alt="" />
               </div>
               ...
             </div>
@@ -63,61 +88,166 @@
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
           </div>
-          
+
           <div class="hero__content">
-            <h1 class="hero__header" aria-label="Проектные решения любой сложности">Проектные решения<br> любой сложности</h1>
-            <p class="hero__description">Есть над чем задуматься: базовые сценарии поведения<br> пользователей и по сей день остаются уделом проектантов</p>   
-            <a href="#" class="hero__btn btn" aria-roledescription="button">Заказать расчёт</a>  
-          </div>            
-        </div>        
+            <h1
+              class="hero__header"
+              aria-label="Проектные решения любой сложности"
+            >
+              Проектные решения<br />
+              любой сложности
+            </h1>
+            <p class="hero__description">
+              Есть над чем задуматься: базовые сценарии поведения<br />
+              пользователей и по сей день остаются уделом проектантов
+            </p>
+            <a
+              role="button"
+              aria-label="Заказать расчёт"
+              href="#"
+              class="hero__btn btn"
+              aria-roledescription="button"
+              >Заказать расчёт</a
+            >
+          </div>
+        </div>
       </section>
       <section class="about">
         <div class="about__container container">
           <h2 class="about__header section-header">О нас</h2>
           <p class="about__description section__description">
-            Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
+            Также как перспективное планирование создаёт необходимость включения
+            в производственный план целого ряда внеочередных мероприятий с
+            учётом комплекса экспериментов, поражающих по своей масштабности и
+            грандиозности. А также диаграммы связей могут быть описаны
+            максимально подробно. Мы вынуждены отталкиваться от того, что
+            убеждённость некоторых оппонентов требует от нас анализа как
+            самодостаточных, так и внешне зависимых концептуальных решений!
+            Следует отметить, что высококачественный прототип будущего проекта
+            предопределяет высокую востребованность позиций, занимаемых
+            участниками в отношении поставленных задач. Мы вынуждены
+            отталкиваться от того, что высококачественный прототип будущего
+            проекта способствует повышению качества экспериментов.
           </p>
           <div class="about__detail about-detail">
             <div class="about-detail__item detail-view">
               <div class="detail-view__description">
-                <p>Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
+                <p>
+                  Принимая во внимание показатели успешности, перспективное
+                  планирование способствует подготовке и реализации новых
+                  принципов.
+                </p>
                 <div class="detail-view__box">
-                  <a href="#" class="detail-view__btn btn btn-transparent">Подробно</a>
-                </div>                
-              </div>              
+                  <a
+                    aria-label="Подробно"
+                    role="button"
+                    href="#"
+                    class="detail-view__btn btn btn-transparent"
+                    >Подробно</a
+                  >
+                </div>
+              </div>
             </div>
             <div class="about-detail__item detail-cards">
               <div class="detail-cards__item">
                 <h3>Консультация с широким активом</h3>
-                <p>А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                <p>
+                  А также свежий взгляд на привычные вещи - безусловно открывает
+                  новые горизонты для как самодостаточных, так и внешне
+                  зависимых концептуальных решений.
+                </p>
               </div>
               <div class="detail-cards__item">
                 <h3>В своём стремлении повысить</h3>
-                <p>Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества.</p>
-              </div>              
+                <p>
+                  Качество жизни, они забывают, что сплочённость команды
+                  профессионалов представляет собой интересный эксперимент
+                  проверки прогресса профессионального сообщества.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        
       </section>
       <section class="how-work">
         <div class="how-work__container container">
           <h2 class="how-work__header section-header">Как мы работаем</h2>
-          <nav class="how-work__nav work-nav">
-            <li class="work-nav__item"><button class="work-nav__button" data-path="one">шаг1</button></li>
-            <li class="work-nav__item"><button class="work-nav__button" data-path="two">шаг2</button></li>
-            <li class="work-nav__item"><button class="work-nav__button" data-path="three">шаг3</button></li>
-            <li class="work-nav__item"><button class="work-nav__button" data-path="four">шаг4</button></li>
+          <nav
+            aria-label="Перечень шагов выполнения работы"
+            class="how-work__nav work-nav"
+          >
+            <li class="work-nav__item">
+              <button
+                aria-label="шаг1"
+                class="work-nav__button"
+                data-path="one"
+              >
+                шаг1
+              </button>
+            </li>
+            <li class="work-nav__item">
+              <button
+                aria-label="шаг2"
+                class="work-nav__button"
+                data-path="two"
+              >
+                шаг2
+              </button>
+            </li>
+            <li class="work-nav__item">
+              <button
+                aria-label="шаг3"
+                class="work-nav__button"
+                data-path="three"
+              >
+                шаг3
+              </button>
+            </li>
+            <li class="work-nav__item">
+              <button
+                aria-label="шаг4"
+                class="work-nav__button"
+                data-path="four"
+              >
+                шаг4
+              </button>
+            </li>
           </nav>
-          <div class="how-work__content how-work__content--active" data-target="one">
+          <div
+            class="how-work__content how-work__content--active"
+            data-target="one"
+          >
             <div class="how-work__description">
               <h3>Проводим сбор информации</h3>
-              <p>Работа инженера-проектировщика начинается с тщательного изучения строения, чтоб составить техническое задание, а дальше все это нужно утвердить с самим заказчиком. В ходе всей этой работы утверждается смета, с учетом стоимости всех работ по исследованию и монтажу, а также оборудования и материалы.</p>
-              <p>В случаях разработки проекта для уже существующих зданий, может возникнуть потребность в перепланировке помещения. Кроме того, что проект должен оценить сам заказчик, он должен одобряться соответствующими органами госконтроля и в случаях необходимости нужно вносить разного рода изменения.</p>
+              <p>
+                Работа инженера-проектировщика начинается с тщательного изучения
+                строения, чтоб составить техническое задание, а дальше все это
+                нужно утвердить с самим заказчиком. В ходе всей этой работы
+                утверждается смета, с учетом стоимости всех работ по
+                исследованию и монтажу, а также оборудования и материалы.
+              </p>
+              <p>
+                В случаях разработки проекта для уже существующих зданий, может
+                возникнуть потребность в перепланировке помещения. Кроме того,
+                что проект должен оценить сам заказчик, он должен одобряться
+                соответствующими органами госконтроля и в случаях необходимости
+                нужно вносить разного рода изменения.
+              </p>
               <ol>
-                <li>Присылаете исходную информацию для конструктора: подробное описание проблемы, желательно с эскизами и фотографиями. Конструктору необходимо время, чтобы подготовиться по данному вопросу.</li>
-                <li>Если вопрос находится в нашей компетенции, согласовываем время и место встречи.</li>
-                <li>Конструктор подробно отвечает на все вопросы. При необходимости составляет письменный ответ.</li>
+                <li>
+                  Присылаете исходную информацию для конструктора: подробное
+                  описание проблемы, желательно с эскизами и фотографиями.
+                  Конструктору необходимо время, чтобы подготовиться по данному
+                  вопросу.
+                </li>
+                <li>
+                  Если вопрос находится в нашей компетенции, согласовываем время
+                  и место встречи.
+                </li>
+                <li>
+                  Конструктор подробно отвечает на все вопросы. При
+                  необходимости составляет письменный ответ.
+                </li>
               </ol>
               <div class="how-work__btns">
                 <button class="how-work__btn btn">Подробнее</button>
@@ -125,152 +255,328 @@
               </div>
             </div>
             <div class="how-work__img">
-              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию" />
             </div>
           </div>
           <div class="how-work__content" data-target="two">
             <div class="how-work__description">
               <h3>Техническая консультация</h3>
-              <p>Техническую консультацию оказывает специалист по необходимому вам профилю с квалификацией не ниже ведущего инженера: конструктор, расчетчик, тепловик, специалист по 3d-сканированию и пр. Главным требованием для наших консультантов мы ставим наличие большого опыта в рассматриваемой тематике.</p>
+              <p>
+                Техническую консультацию оказывает специалист по необходимому
+                вам профилю с квалификацией не ниже ведущего инженера:
+                конструктор, расчетчик, тепловик, специалист по 3d-сканированию
+                и пр. Главным требованием для наших консультантов мы ставим
+                наличие большого опыта в рассматриваемой тематике.
+              </p>
 
-              <p>При необходимости мы организовываем консультации с представителями производств.</p>
+              <p>
+                При необходимости мы организовываем консультации с
+                представителями производств.
+              </p>
               <div class="how-work__btns">
                 <button class="how-work__btn btn">Подробнее</button>
                 <a href="#" class="how-work__btn btn btn-white">Договор</a>
               </div>
             </div>
             <div class="how-work__img">
-              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию" />
             </div>
           </div>
           <div class="how-work__content" data-target="three">
             <div class="how-work__description">
               <h3>Создание 3D проекта</h3>
-              <p>После разработки проекта его графически воплощают в специальной компьютерной программе. Весь проект должен согласовываться с другими специалистами, одновременно работающими над одним и тем же проектом. Все это нужно для того, чтоб в будущем не возникло каких либо проблем.</p>              
+              <p>
+                После разработки проекта его графически воплощают в специальной
+                компьютерной программе. Весь проект должен согласовываться с
+                другими специалистами, одновременно работающими над одним и тем
+                же проектом. Все это нужно для того, чтоб в будущем не возникло
+                каких либо проблем.
+              </p>
               <div class="how-work__btns">
                 <button class="how-work__btn btn">Подробнее</button>
                 <a href="#" class="how-work__btn btn btn-white">Договор</a>
               </div>
             </div>
             <div class="how-work__img">
-              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию" />
             </div>
           </div>
           <div class="how-work__content" data-target="four">
             <div class="how-work__description">
               <h3>Составление плана проекта</h3>
-              <p>После чего, составится план, по которому будут происходить любые работы, чтоб не срывать графики. Сам инженер-проектировщик будет руководить рабочей бригадой, составляя им техзадания. Такой контроль в обязательном порядке проводится инженером, который в конечном итоге составит документы, где укажет абсолютно все, что касается данного проекта, включая различные схемы с планами.</p>              
+              <p>
+                После чего, составится план, по которому будут происходить любые
+                работы, чтоб не срывать графики. Сам инженер-проектировщик будет
+                руководить рабочей бригадой, составляя им техзадания. Такой
+                контроль в обязательном порядке проводится инженером, который в
+                конечном итоге составит документы, где укажет абсолютно все, что
+                касается данного проекта, включая различные схемы с планами.
+              </p>
               <div class="how-work__btns">
                 <button class="how-work__btn btn">Подробнее</button>
-                <a href="#" class="how-work__btn btn btn-white">Договор</a>
+                <a
+                  role="button"
+                  aria-label="Прочитать договор"
+                  href="#"
+                  class="how-work__btn btn btn-white"
+                  >Договор</a
+                >
               </div>
             </div>
             <div class="how-work__img">
-              <img src="./img/how-work.jpg" alt="Проводим консультацию">
+              <img src="./img/how-work.jpg" alt="Проводим консультацию" />
             </div>
           </div>
         </div>
       </section>
       <section class="FAQ">
         <div class="FAQ__container container">
-          <h2 class="FAQ__header section-header">Часто задаваемые вопросы</h2> 
+          <h2 class="FAQ__header section-header">Часто задаваемые вопросы</h2>
           <nav class="FAQ__list FAQ-list">
             <li class="FAQ-list__item FAQ-item">
               <div class="FAQ-item__text">
-                <p class="FAQ-list__question">Из чего формируется конечная стоимость проекта?</p>
-                <button class="FAQ-list__button" data-spoller aria-label="Из чего формируется конечная стоимость проекта?"></button>
+                <p class="FAQ-list__question">
+                  Из чего формируется конечная стоимость проекта?
+                </p>
+                <button
+                  class="FAQ-list__button"
+                  data-spoller
+                  aria-label="Ответ при нажатии"
+                ></button>
               </div>
               <div class="FAQ-item__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat voluptas dicta laboriosam veritatis nihil eaque
+                quisquam mollitia voluptatum soluta. Necessitatibus fugit
+                consectetur sit! Itaque magni hic illum esse assumenda aliquid
+                quidem doloribus quam. Cum molestias suscipit nihil quod
+                doloribus ducimus iure, incidunt autem. Et perferendis neque
+                tempora ex, vel harum?
               </div>
             </li>
             <li class="FAQ-list__item FAQ-item">
               <div class="FAQ-item__text">
-                <p>У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p><button class="FAQ-list__button" data-spoller aria-label="У меня есть свой проект. Сможем ли мы его доработать / реализовать?"></button>
+                <p>
+                  У меня есть свой проект. Сможем ли мы его доработать /
+                  реализовать?
+                </p>
+                <button
+                  class="FAQ-list__button"
+                  data-spoller
+                  aria-label="Ответ при нажатии"
+                ></button>
               </div>
               <div class="FAQ-item__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat voluptas dicta laboriosam veritatis nihil eaque
+                quisquam mollitia voluptatum soluta. Necessitatibus fugit
+                consectetur sit! Itaque magni hic illum esse assumenda aliquid
+                quidem doloribus quam. Cum molestias suscipit nihil quod
+                doloribus ducimus iure, incidunt autem. Et perferendis neque
+                tempora ex, vel harum?
               </div>
             </li>
             <li class="FAQ-list__item FAQ-item">
               <div class="FAQ-item__text">
-                <p>Я выбираю между разными компаниями. В чём ваше отличие?</p><button class="FAQ-list__button" data-spoller aria-label="Я выбираю между разными компаниями. В чём ваше отличие?"></button>
+                <p>Я выбираю между разными компаниями. В чём ваше отличие?</p>
+                <button
+                  class="FAQ-list__button"
+                  data-spoller
+                  aria-label="Ответ при нажатии"
+                ></button>
               </div>
               <div class="FAQ-item__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat voluptas dicta laboriosam veritatis nihil eaque
+                quisquam mollitia voluptatum soluta. Necessitatibus fugit
+                consectetur sit! Itaque magni hic illum esse assumenda aliquid
+                quidem doloribus quam. Cum molestias suscipit nihil quod
+                doloribus ducimus iure, incidunt autem. Et perferendis neque
+                tempora ex, vel harum?
               </div>
             </li>
             <li class="FAQ-list__item FAQ-item">
               <div class="FAQ-item__text">
-                <p>Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? </p><button class="FAQ-list__button" data-spoller aria-label="Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?"></button>
+                <p>
+                  Могу ли я делегировать вам работу / согласование с подрядчиком
+                  / организацией?
+                </p>
+                <button
+                  class="FAQ-list__button"
+                  data-spoller
+                  aria-label="Ответ при нажатии"
+                ></button>
               </div>
               <div class="FAQ-item__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat voluptas dicta laboriosam veritatis nihil eaque
+                quisquam mollitia voluptatum soluta. Necessitatibus fugit
+                consectetur sit! Itaque magni hic illum esse assumenda aliquid
+                quidem doloribus quam. Cum molestias suscipit nihil quod
+                doloribus ducimus iure, incidunt autem. Et perferendis neque
+                tempora ex, vel harum?
               </div>
             </li>
             <li class="FAQ-list__item FAQ-item">
               <div class="FAQ-item__text">
-                <p>Могу ли я вернуть деньги на каком-либо из этапов работ?</p><button class="FAQ-list__button" data-spoller aria-label="Могу ли я вернуть деньги на каком-либо из этапов работ?"></button>
+                <p>Могу ли я вернуть деньги на каком-либо из этапов работ?</p>
+                <button
+                  class="FAQ-list__button"
+                  data-spoller
+                  aria-label="Ответ при нажатии"
+                ></button>
               </div>
               <div class="FAQ-item__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas dicta laboriosam veritatis nihil eaque quisquam mollitia voluptatum soluta. Necessitatibus fugit consectetur sit! Itaque magni hic illum esse assumenda aliquid quidem doloribus quam. Cum molestias suscipit nihil quod doloribus ducimus iure, incidunt autem. Et perferendis neque tempora ex, vel harum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat voluptas dicta laboriosam veritatis nihil eaque
+                quisquam mollitia voluptatum soluta. Necessitatibus fugit
+                consectetur sit! Itaque magni hic illum esse assumenda aliquid
+                quidem doloribus quam. Cum molestias suscipit nihil quod
+                doloribus ducimus iure, incidunt autem. Et perferendis neque
+                tempora ex, vel harum?
               </div>
             </li>
-          </nav>         
+          </nav>
         </div>
-      </section> 
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__item footer__item-nav">
-          <a href="#" class="footer__logo"><img src="./img/Logo_white.svg" alt=""></a>
-          <nav class="footer__nav footer-nav">
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">О нас</a></li>
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">Проекты</a></li>
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">Отзывы</a></li>
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">Договор оферты</a></li>
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">Договор подряда</a></li>
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">Конфиденциальность</a></li>
-            <li class="footer-nav__item"><a href="" class="footer-nav__link">Партнёрское соглашение</a></li>
-          </nav> 
-          <nav class="footer__iconbar iconbar">
-            <li class="iconbar__item"><a href="#" class="iconbar__link" aria-label="facebook"><svg class="iconbar__icon" ><use xlink:href="./img/footer_icons.svg#fb"></use></svg> </a></li>
-            <li class="iconbar__item"><a href="#" class="iconbar__link" aria-label="vk"><svg class="iconbar__icon"><use xlink:href="./img/footer_icons.svg#vk"></use></svg> </a></li>
-            <li class="iconbar__item"><a href="#" class="iconbar__link" aria-label="instagram"><svg class="iconbar__icon"><use xlink:href="./img/footer_icons.svg#instagram"></use></svg> </a></li> 
+          <a aria-label="Лого сайта" href="#" class="footer__logo"
+            ><img src="./img/Logo_white.svg" alt=""
+          /></a>
+          <nav class="footer__nav footer-nav" aria-label="Навигация по сайту">
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">О нас</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Проекты</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Отзывы</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Договор оферты</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Договор подряда</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Конфиденциальность</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">Партнёрское соглашение</a>
+            </li>
           </nav>
-        </div>      
+          <nav class="footer__iconbar iconbar">
+            <li class="iconbar__item">
+              <a href="#" class="iconbar__link" aria-label="facebook"
+                ><svg class="iconbar__icon">
+                  <use xlink:href="./img/footer_icons.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="iconbar__item">
+              <a href="#" class="iconbar__link" aria-label="vk"
+                ><svg class="iconbar__icon">
+                  <use xlink:href="./img/footer_icons.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="iconbar__item">
+              <a href="#" class="iconbar__link" aria-label="instagram"
+                ><svg class="iconbar__icon">
+                  <use xlink:href="./img/footer_icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </nav>
+        </div>
         <div class="footer__item footer__item-form">
           <h2 class="footer__header-form">Оставить заявку</h2>
-          <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form application-form">
+          <form
+            action="https://jsonplaceholder.typicode.com/posts"
+            method="post"
+            class="footer__form application-form"
+          >
             <p class="application-form__fielsed">
-              <label for="user-name" class="visual-hidden">Фамилия, имя, отчество</label>
-              <input class="application-form__input" id="user-name" type="text" placeholder="Фамилия, имя и отчество*" name="user-name">
+              <label for="user-name" class="visual-hidden"
+                >Фамилия, имя, отчество</label
+              >
+              <input
+                class="application-form__input"
+                id="user-name"
+                type="text"
+                placeholder="Фамилия, имя и отчество*"
+                name="user-name"
+              />
             </p>
             <p class="application-form__fielsed">
-              <label for="Електронный адрес" class="visual-hidden"></label>
-              <input class="application-form__input" type="text" name="user-email" id="user-email" placeholder="E-mail*">
+              <label for="user-email" class="visual-hidden"
+                >Електронный адрес</label
+              >
+              <input
+                class="application-form__input"
+                type="text"
+                name="user-email"
+                id="user-email"
+                placeholder="E-mail*"
+              />
             </p>
-            <label for="user-message"></label>
-            <textarea class="application-form__textarea" id="user-message" placeholder="Сообщение" name="user-message"></textarea>
+            <label for="user-message" class="visual-hidden"
+              >Оставить сообщение</label
+            >
+            <textarea
+              class="application-form__textarea"
+              id="user-message"
+              placeholder="Сообщение"
+              name="user-message"
+            ></textarea>
             <div class="application-form__btn-box">
-              <button type="submit" class="btn application-form__btn">Отправить  данные</button>
+              <button
+                aria-label="Отправить данные"
+                type="submit"
+                class="btn application-form__btn"
+              >
+                Отправить данные
+              </button>
               <p class="application-form__help">
-                <label for="remember-me" class="application-form__checkbox">
-                  <input id="remember-me" type="checkbox" name="remember" class="visual-hidden" checked>
+                <label
+                  role="checkbox"
+                  aria-checked="true"
+                  aria-label="Согласен на обработку данных"
+                  for="remember-me"
+                  class="application-form__checkbox"
+                >
+                  <input
+                    id="remember-me"
+                    type="checkbox"
+                    name="remember"
+                    class="visual-hidden"
+                    checked
+                  />
                   <span class="checkbox-indicator"></span>
                   <span class="label">Согласен на обработку данных</span>
                 </label>
               </p>
-            </div>            
+            </div>
           </form>
         </div>
         <div class="footer__item footer__item-desc">
-          <p class="footer__description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. </p>        
+          <p class="footer__description">
+            Высокий уровень вовлечения представителей целевой аудитории является
+            четким доказательством простого факта: разбавленное изрядной долей
+            эмпатии, рациональное мышление позволяет оценить значение модели
+            развития. Таким образом, консультация с широким активом обеспечивает
+            широкому кругу (специалистов) участие в формировании стандартных
+            подходов.
+          </p>
         </div>
-      </div>  
-    </footer>    
+      </div>
+    </footer>
     <script src="js/main.js"></script>
-    <script src="js/tabs.js"></script>    
+    <script src="js/tabs.js"></script>
     <script src="js/swiper.js"></script>
   </body>
 </html>

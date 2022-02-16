@@ -229,7 +229,7 @@ main {
   display: block;
   margin-left: auto;
 }
-.header__link:focus {
+.header__link:focus > img {
   outline: 2px solid var(--orange);
 }
 
@@ -336,6 +336,19 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--dark-grey);
+}
+
+.swiper-button-prev:focus,
+.swiper-button-next:focus,
+.swiper-button-prev:hover,
+.swiper-button-next:hover  {
+  color: var(--orange);
+  outline: none;
 }
 
 .hero__header {
